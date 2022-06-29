@@ -10,9 +10,9 @@ function singleRound(playerSelection, computerSelection = computerPlay()){
     if(playerSelection === computerSelection){
         return 'You draw';
     } else if(words.indexOf(playerSelection)- words.indexOf(computerSelection) == 1 || words.indexOf(playerSelection)- words.indexOf(computerSelection) == 2  ){
-        return 'You won!, ' + playerSelection + ' beats ' + computerSelection;
+        return 'You win! ' + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1) + ' beats ' + computerSelection;
     } else {
-        return 'You lost!, ' + computerSelection + ' beats ' + playerSelection;
+        return 'You lose! ' + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1) + ' beats ' + playerSelection;
     }
 }
 
